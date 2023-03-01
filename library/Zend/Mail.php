@@ -1238,7 +1238,8 @@ class Zend_Mail extends Zend_Mime_Message
                       '<'  => '[',
                       '>'  => ']',
         );
-
+        if(!$name)
+            $name="";
         return trim(strtr($name, $rule));
     }
 
@@ -1254,7 +1255,8 @@ class Zend_Mail extends Zend_Mime_Message
                       "\n" => '',
                       "\t" => '',
         );
-
+        if(!$data)
+            $data="";
         return strtr($data, $rule);
     }
 
